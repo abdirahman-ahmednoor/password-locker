@@ -6,7 +6,7 @@ class Credentials:
     """
     accounts_list = []
     user_accounts = []
-    def __init__(self, acount_name, email, username, password, user):
+    def __init__(self, account_name, email, username, password, user):
         """__init__ method to help define the propertiesof our credentials objects.
 
         Args:
@@ -91,9 +91,40 @@ class User:
         self.lname = lname
         self.username = username
         self.password = password  
-          
+
+    def save_user(self):
+        """save_user method taht saves user objects into the users list.
+        """
+        User.users_list.append(self)
+
+    @classmethod
+    def user_login(cls, username, pw):
+        """user_login that handles user logging in.
+
+        Args:
+          username (string): Username to log in.
+          pw (string): User password 
+
+        Returns:
+           User: Returns a user object that matches the given username and password.
+           """
+        for user in cls.users_list:
+               if user.username == useranme and user.password ==pw:
+                   return user      
+    
+    def delete_user(self):
+        """delete_user that removes a user from the list of ussers.
+        """
+        User.users_list.remove(self)
 
     
-    
+###test data ######
 
-    
+user1 = User('Abdirahman', 'Noor', 'test', 't3st')
+User.user_list.append(user1)
+
+account1 = Credentials('Twitter', 'abdirahman@mail.com', 'blade', 'fsdjHJKL', '')
+account2 = Credentials('Facebook', 'abdirahman@mail.com', 'noor', 'svwGIKLO', '')
+
+Credentials.accounts_list.append(account1)
+Credentials.accounts_list.append(account2)
