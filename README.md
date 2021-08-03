@@ -7,7 +7,7 @@ Abdirahman Noor
 A simple python application ro amnage password using TDD with unittest.
 a user can:
 - Create a new user.
-- Log in an exsiting user.
+- Log in an exsiting user.(Username: 'test' & Password: 't3st' for test data)
 - Remove a saved user.
 
 When the user is logged in, they can:
