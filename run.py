@@ -45,7 +45,7 @@ def save_user(user):
     """
     user.save_user()
 
-def user_login(uanme, pw):
+def user_login(uname, pw):
     """Funtion to handle user login.
     """
     return User.user_login(uname, pw)

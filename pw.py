@@ -108,8 +108,8 @@ class User:
         Returns:
            User: Returns a user object that matches the given username and password.
            """
-        for user in cls.users_list:
-               if user.username == useranme and user.password ==pw:
+        for user in cls.user_list:
+               if user.username == username and user.password == pw:
                    return user      
     
     def delete_user(self):
