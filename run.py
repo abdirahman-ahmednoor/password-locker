@@ -26,7 +26,7 @@ def display_accounts(user):
     """Function all returns all credentials of logged n user.
     """
     account = Credentials.display_accounts(user)
-    return accounts
+    return account
 
 def delete_account(account):
     """Function to delete an account.
@@ -37,7 +37,7 @@ def delete_account(account):
 def create_user(fname, lname, uname, pw):
     """Function for creating new user.
     """
-    new_user = User(name, lname, uname, pw)
+    new_user = User(fname, lname, uname, pw)
     return new_user 
 
 def save_user(user):
@@ -148,7 +148,7 @@ def main():
                             print('_'*40)
                             for account in accounts:
                                 print(f'{account.account_name}.....\t{account.username}.....\t{account.password}')
-                                Credential.user_accounts = []
+                                Credentials.user_accounts = []
                                 accounts =[]
                             else:
                                 print("You don't seem to have any credentials save yet.")

@@ -38,7 +38,7 @@ class Credentials:
         Return:
            string: Return the generated password. 
         """
-        pw: ''.join(random.choice(string.ascii_letter)for i in range(pw_length))
+        pw= ''.join(random.choice(string.ascii_letter)for i in range(pw_length))
         return pw
 
     @classmethod
@@ -64,7 +64,7 @@ class Credentials:
            Credentials: List of filtered credentials.
         """
         for account in cls.accounts_list:
-            if accont.user == user:
+            if account.user == User:
                 cls.user_accounts.append(account)
         return cls.user_accounts
 

@@ -1,3 +1,4 @@
+from _typeshed import Self
 import unittest
 
 from pw import Credentials, User
@@ -32,8 +33,8 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.account.user, 'noor')
 
     def test_save_account(self):
-         """test_save_account test case to test if the credentials object is saved into the credentials list.
-         """
+        """test_save_account test case to test if the credentials object is saved into the credentials list.
+        """
         self.account1.save_account()
         self.account2.save_account()
 
@@ -43,12 +44,12 @@ class TestCredentials(unittest.TestCase):
     def test_generate_pw(self):
         """test_generate_pw test case to test whether we can set a password for an object (both credential and user) when creating one.
          """
-        self.assertEqaul(len(Credentials,generate_pw(5)), 5)
+        self.assertEqaul(len(Credentials.generate_pw(5)), 5)
 
     def test_set_pw(self):
-          """test_generate_pw test case to test whether we can set a password for an object (both credential and user) when creating one.
+        """test_generate_pw test case to test whether we can set a password for an object (both credential and user) when creating one.
          """
-         pw = Credentials.set_pw('P&JJolKpU88')
+        pw = Credentials.set_pw('P&JJolKpU88')
 
         self.assertEqual(pw, 'P&JJolKpU88')
 
@@ -58,24 +59,24 @@ class TestCredentials(unittest.TestCase):
         self.account1.save_account()
         self.account2.save_account()
 
-        self.assertEqaul(Credential.display_accounts('noor'), Credentials.user_accounts)    
+        self.assertEqaul(Credentials.display_accounts('noor'), Credentials.user_accounts)    
 
     def test_delete_account(self):
-         """test_delete_acccount to test if we can remove a credential from our credential list.
-         """
+        """test_delete_acccount to test if we can remove a credential from our credential list.
+        """
         self.account1.save_account()
         self.account2.save_account()
 
         self.account1.delete_account()
 
-        self.assertEqual(len(Credential.account_list), 3)  
+        self.assertEqual(len(Credentials.account_list), 3)  
 
 class TestUser(unittest.TestCase):
     """Test class that defines test cases for the user class behaviour.
 
     Args:
       unittest (TestCase): TestCase class that helps in creating test cases.
-      """
+    """
     def setUp(self):
         """setUp method to run before each test cases.
         """

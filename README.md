@@ -20,16 +20,16 @@ The user also has an option of inputting or autogenrating apassword by providing
 
 ## SETUP
 On your Terminal, clone the project.
-      $ git clone git@github.com/abdirahman-ahmednoor/password-locker.git
+     | $ git clone git@github.com/abdirahman-ahmednoor/password-locker.git
 
 Navigate into cloned project.
-      $ cd password-locker
+     | $ cd password-locker
 
 Given excution permission to 'run.py'.
-      $ chmod +x run.py
+     | $ chmod +x run.py
 
 Run the program.
-     $ ./run.py
+     |  $ ./run.py
 
 ## TECHNOLOGIES USED
 1. Python
