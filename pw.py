@@ -120,7 +120,7 @@ class User:
     
 ###test data ######
 
-user1 = User('Abdirahman', 'Noor', 'test', 't3st')
+user1 = User('Abdirahman', 'Noor', 'jojo', 'bizarre')
 User.user_list.append(user1)
 
 account1 = Credentials('Twitter', 'abdirahman@mail.com', 'blade', 'fsdjHJKL', '')
